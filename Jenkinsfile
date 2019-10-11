@@ -4,7 +4,8 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        sh 'echo \'hello\''
+        sh '''pwd
+ls -a'''
       }
     }
   }
