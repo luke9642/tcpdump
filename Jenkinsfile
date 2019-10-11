@@ -10,6 +10,8 @@ pipeline {
       }
       steps {
         sh './configure'
+        sh '''apt update
+apt install libc-dev gcc openssl-dev make libpcap-dev git'''
       }
     }
   }
