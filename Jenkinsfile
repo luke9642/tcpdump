@@ -2,10 +2,14 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      agent any
+      agent {
+        docker {
+          image 'alpine'
+        }
+
+      }
       steps {
-        sh '''pwd
-ls -a'''
+        sh './configure'
       }
     }
   }
