@@ -9,9 +9,8 @@ pipeline {
 
       }
       steps {
+        sh 'apk add libc-dev gcc openssl-dev make libpcap-dev git'
         sh './configure'
-        sh '''apt update
-apt install libc-dev gcc openssl-dev make libpcap-dev git'''
       }
     }
   }
